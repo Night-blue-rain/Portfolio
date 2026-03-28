@@ -1,0 +1,20 @@
+[
+  {
+    "title": "🎮 Unity 游戏项目",
+    "desc": "基于 Unity 的游戏开发，包含角色控制、UI交互和网络同步逻辑。",
+    "cover": "https://picsum.photos/800/450?random=1",
+    "bvid": "BV1xx411c7mD"
+  },
+  {
+    "title": "📊 推荐系统算法",
+    "desc": "使用余弦相似度 + Top-K 推荐，并进行了算法优化与性能分析。",
+    "cover": "sit_change.webp",
+    "bvid": "BV1NkY1emEmi"
+  },
+  {
+    "title": "🧠 PCA 图像压缩",
+    "desc": "使用 PCA 对人脸数据进行降维与重建，实现图像压缩。",
+    "cover": "https://picsum.photos/800/450?random=3",
+    "bvid": "BVxxxxxxxxx"
+  }
+]

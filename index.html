@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的项目作品集</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 32px;
+            font-weight: bold;
+            background: #020617;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            padding: 20px;
+            background: #1e293b;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            gap: 20px;
+        }
+
+        .project:hover {
+            transform: translateY(-5px) scale(1.01);
+        }
+
+        .left {
+            flex: 1;
+            min-width: 280px;
+            padding: 20px;
+        }
+
+        .left h2 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .left p {
+            color: #cbd5f5;
+            line-height: 1.6;
+
+            /* ✅ 自动换行关键 */
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .right {
+            flex: 1.5;
+            min-width: 320px;
+        }
+
+        .video-box {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-box img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .video-box:hover img {
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: white;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            padding: 12px 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 340px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+            }
+
+            iframe, .video-box img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    我的项目作品集
+</header>
+
+<div class="container" id="projectList"></div>
+
+<footer>
+    © 2026 我的名字 | GitHub Portfolio
+</footer>
+
+<script>
+async function loadProjects() {
+    try {
+        const res = await fetch('projects.json');
+        const projects = await res.json();
+
+        const container = document.getElementById('projectList');
+
+        projects.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'project';
+
+            div.innerHTML = `
+                <div class="left">
+                    <h2>${p.title}</h2>
+                    <p>${p.desc}</p>
+                </div>
+                <div class="right">
+                    <div class="video-box" onclick="playVideo(this, '${p.bvid}')">
+                        <img src="${p.cover}">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+            `;
+
+            container.appendChild(div);
+        });
+    } catch (err) {
+        console.error("加载 projects.json 失败:", err);
+    }
+}
+
+function playVideo(element, bvid) {
+    element.innerHTML = `
+        <iframe 
+            src="https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=1"
+            allowfullscreen="true">
+        </iframe>
+    `;
+}
+
+loadProjects();
+</script>
+
+</body>
+</html>
