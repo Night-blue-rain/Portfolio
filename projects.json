@@ -1,26 +1,20 @@
 [
   {
-    "title": "🎮 Unity 游戏项目",
-    "desc": "基于 Unity 的游戏开发，包含角色控制、UI交互和网络同步逻辑。\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw\nsadasdasdaweqweqw",
-    "cover": "https://picsum.photos/800/450?random=1",
-    "bvid": "BV1xx411c7mD"
+    "title": "高敏感",
+    "desc": "如果你是高敏感星人，总因别人的一句话、一个小举动瞬间破防，陷入反复揣摩的自我内耗，别再怪自己 “想太多”！/n我们今天从心理学底层拆解高敏人「偷蓝式消耗」的根源，教你 3 个超实用的精力守护技能，帮你摆脱评价寄生，守住宝贵的注意力，做自己情绪的主人！",
+    "cover": "高敏感.webp",
+    "bvid": "BV1kAAnzQEgj"
   },
   {
-    "title": "📊 推荐系统算法",
-    "desc": "使用余弦相似度 + Top-K 推荐，并进行了算法优化与性能分析。\nsadasdasdaweqweqw",
-    "cover": "sit_change.webp",
-    "bvid": "BV1NkY1emEmi"
-  },
-  {
-    "title": "🧠 PCA 图像压缩",
-    "desc": "使用 PCA 对人脸数据进行降维与重建，实现图像压缩。",
-    "cover": "https://picsum.photos/800/450?random=3",
-    "bvid": "BV1H8e8eeEQS"
-  },
-  {
-    "title": "🧠 PCA 图像压缩",
-    "desc": "使用 PCA 对人脸数据进行降维与重建，实现图像压缩。",
-    "cover": "https://picsum.photos/800/450?random=3",
+    "title": "如何上课不困",
+    "desc": "如果你也处在 “上课嗜睡、学习效率低下” 的状态，不要内耗，我们今天从3个心理学维度，给你系统的搞清楚这背后的生理与心理成因，用四个实用的小方法让你无痛摆脱现状，找回状态！",
+    "cover": "上课不困.webp",
     "bvid": "BV1GBPWzJEru"
-  }
+  },
+  {
+    "title": "适度抽象",
+    "desc": "当人们在生活中感到焦虑或压抑时，荒诞的情节和反逻辑的表达，能带来一种短暂的心理解脱。于是，“玩抽象”就这样成为了年轻人减压的“安全阀”。",
+    "cover": "搞抽象.webp",
+    "bvid": "BV1uRzTBTE9H"
+  },
 ]
